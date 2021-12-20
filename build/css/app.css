@@ -1,0 +1,222 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .container {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.header {
+  margin: 3rem 2rem;
+}
+@media (min-width: 992px) {
+  .header {
+    margin: 5rem 6rem;
+    padding-left: 2rem;
+    position: absolute;
+    top: 0;
+    z-index: 200;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    margin-left: 15rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .group {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+.img_principal {
+  width: 100%;
+  min-height: 25rem;
+  background-image: url(/images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 480px) {
+  .img_principal {
+    height: 45rem;
+  }
+}
+@media (min-width: 992px) {
+  .img_principal {
+    background-image: url(/images/hero-desktop.jpg);
+    width: 50%;
+    background-size: cover;
+    height: 100vh;
+    order: 2;
+    z-index: 200;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 480px) {
+  .main {
+    margin: 0 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .main {
+    display: initial;
+    width: 50%;
+    order: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    margin: 0 15rem;
+  }
+}
+.main h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  letter-spacing: 1.4rem;
+  transform: translateX(-100%);
+  animation: textleft 0.8s ease forwards;
+}
+@media (min-width: 992px) {
+  .main h1 {
+    font-size: 7rem;
+    text-align: left;
+    letter-spacing: 2.5rem;
+  }
+}
+.main h1 .title {
+  display: block;
+  color: #ce9797;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.main .text-content {
+  line-height: 1.6;
+  color: #ce9797;
+  text-align: center;
+  padding: 0 1.5rem;
+  z-index: 100;
+  letter-spacing: 0.5px;
+  transform: translateX(100%);
+  animation: textright 0.8s ease forwards;
+}
+@media (min-width: 992px) {
+  .main .text-content {
+    text-align: left;
+    width: 70%;
+  }
+}
+.main form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  margin: 2.5rem 1.5rem 5.5rem 1.5rem;
+  position: relative;
+  transform: translateX(-100%);
+  animation: textleft 0.8s ease forwards;
+}
+@media (min-width: 992px) {
+  .main form {
+    width: 50rem;
+  }
+}
+.main form input {
+  border: 1px solid #ce9797;
+  padding: 1.8rem 2rem;
+  border-radius: 3rem;
+  flex-grow: 1;
+  color: #ce9797;
+}
+.main form input::placeholder {
+  color: #ce9797;
+  letter-spacing: 0.1rem;
+}
+.main form input:focus {
+  outline: none;
+  box-shadow: 0 0 0.2rem #f96262;
+}
+.main form small {
+  padding: 1rem;
+  display: none;
+}
+.main form.error small {
+  display: block;
+  color: #f96262;
+}
+.main form button {
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0.2rem 0.5rem 1rem rgba(206, 151, 151, 0.5);
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  padding: 1.5rem;
+  position: absolute;
+  right: 0;
+  width: 7.5rem;
+  transition: opacity 0.2s ease;
+}
+.main form button:hover {
+  opacity: 0.6;
+}
+.main form.error .icon_error {
+  background-image: url(/images/icon-error.svg);
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: right;
+  padding-right: 9rem;
+}
+
+@keyframes textleft {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes textright {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
