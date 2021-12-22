@@ -17,11 +17,7 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  position: relative;
+overflow-x: hidden;
 }
 @media (min-width: 992px) {
   .container {
